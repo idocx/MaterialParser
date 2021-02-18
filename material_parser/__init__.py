@@ -1,4 +1,4 @@
-#from . import material_parser
+from .material_parser import MaterialParser
 
 __author__ = "Olga Kononova"
 __maintainer__ = "Olga Kononova"

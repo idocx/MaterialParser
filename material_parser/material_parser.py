@@ -19,12 +19,12 @@ from pprint import pprint
 
 class MaterialParser:
     def __init__(self, verbose=False, pubchem_lookup=False, fails_log=False, dictionary_update=False):
-        print("Initializing MaterialParser version 6.1.2")
+        # print("Initializing MaterialParser version 6.1.2")
 
         self.__filename = os.path.dirname(os.path.realpath(__file__))
-        self.__pubchem_dictionary = json.loads(open(os.path.join(self.__filename, "rsc/pubchem_dict.json")).read())
-        self.__abbreviations = json.loads(open(os.path.join(self.__filename, "rsc/abbreviations.json")).read())
-        self.__ions = json.loads(open(os.path.join(self.__filename, "rsc/ions_dictionary.json")).read())
+        self.__pubchem_dictionary = json.loads(open(os.path.join(self.__filename, "rsc/pubchem_dict.json"), encoding="utf-8").read())
+        self.__abbreviations = json.loads(open(os.path.join(self.__filename, "rsc/abbreviations.json"), encoding="utf-8").read())
+        self.__ions = json.loads(open(os.path.join(self.__filename, "rsc/ions_dictionary.json"), encoding="utf-8").read())
 
         self.__element2name = self.__ions["elements"]
         self.__list_of_elements_1 = [el for el in self.__ions["elements"].keys() if len(el) == 1]

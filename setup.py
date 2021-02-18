@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='Materials Parser',
+    name='material_parser',
     packages=find_packages(),
     version='6.0.1',
     author='Synthesis Project Team',
@@ -11,7 +11,7 @@ setup(
     install_requires=[
         "regex",
         "pubchempy",
-        "sympy"
+        "sympy",
     ],
     include_package_data=True
 )
